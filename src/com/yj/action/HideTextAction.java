@@ -41,7 +41,8 @@ public class HideTextAction extends BaseAndroidGenerateCodeAction {
                                     if (((XmlTag) element).getAttribute("android:text") != null &&
                                             TEXT.equals(((XmlTag) element).getAttributeValue("android:text"))) {
                                         // 怎样删除呢
-                                        ((XmlTag) element).setAttribute("android:text", "");
+                                        ((XmlTag) element).getAttribute("android:text").delete();
+//                                                ((XmlTag) element).setAttribute("android:text", "");
                                     }
                                 }
                             }
